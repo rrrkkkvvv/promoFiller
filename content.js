@@ -8,10 +8,11 @@ socket.addEventListener("message", function (event) {
 
       if (caseBattleCoupon  && button) {
          caseBattleCoupon.value = text;
-        
-        // setTimeout(()=>{
-        //   button.click();
-        // }, 1000)
+         caseBattleCoupon.dispatchEvent(new Event('input', { bubbles: true }));
+
+        setTimeout(()=>{
+          button.click();
+        }, 150)
         
       }
     }else if(type==="promo"){
