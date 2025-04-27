@@ -20,9 +20,10 @@ socket.addEventListener("message", function (event) {
       const dinoPromo = document.querySelector("input.NewPromoInput_input__ljgpW");
   
       const button = document.querySelector("button.NewPromoInput_acceptBtn__gVjBs");  
-  
-    if (dinoPromo && button) {
-      dinoPromo.value = text;
+      
+      if (dinoPromo && button) {
+        dinoPromo.value = text;
+        dinoPromo.dispatchEvent(new Event('input', { bubbles: true }));
  
  
 
