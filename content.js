@@ -1,4 +1,4 @@
-const socket = new WebSocket("https://promocatcher.onrender.com/");
+const socket = new WebSocket("wss://promocatcher.onrender.com/");
  
 socket.addEventListener("message", function (event) {
     const {type, text} = JSON.parse(event.data);
